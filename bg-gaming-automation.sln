@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Libraries", "Common Libraries", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bg-Core", "Common Libraries\Bg-Core\Bg-Core.csproj", "{BE6D75B2-E776-2D80-9CF0-33C1CB61753C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bg-Playwright-WebDriver-Client", "Common Libraries\Bg-Playwright-WebDriver-Client\Bg-Playwright-WebDriver-Client.csproj", "{1B89D082-6C41-3B19-9867-844E477593AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B89D082-6C41-3B19-9867-844E477593AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B89D082-6C41-3B19-9867-844E477593AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B89D082-6C41-3B19-9867-844E477593AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B89D082-6C41-3B19-9867-844E477593AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1B89D082-6C41-3B19-9867-844E477593AA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77FD5F8F-437A-417A-9EAE-6BE2A85DD901}
+	EndGlobalSection
+EndGlobal
