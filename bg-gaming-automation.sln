@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bg-Core", "Common Libraries
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bg-Playwright-WebDriver-Client", "Common Libraries\Bg-Playwright-WebDriver-Client\Bg-Playwright-WebDriver-Client.csproj", "{1B89D082-6C41-3B19-9867-844E477593AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bg-PageObjects", "Bg-PageObjects\Bg-PageObjects.csproj", "{C322A4A8-FD68-4D41-95EB-85970A8173BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{1B89D082-6C41-3B19-9867-844E477593AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B89D082-6C41-3B19-9867-844E477593AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B89D082-6C41-3B19-9867-844E477593AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C322A4A8-FD68-4D41-95EB-85970A8173BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C322A4A8-FD68-4D41-95EB-85970A8173BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C322A4A8-FD68-4D41-95EB-85970A8173BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C322A4A8-FD68-4D41-95EB-85970A8173BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BE6D75B2-E776-2D80-9CF0-33C1CB61753C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1B89D082-6C41-3B19-9867-844E477593AA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C322A4A8-FD68-4D41-95EB-85970A8173BE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77FD5F8F-437A-417A-9EAE-6BE2A85DD901}

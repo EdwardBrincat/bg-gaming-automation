@@ -86,4 +86,12 @@ public class WebElementQueryBuilder
 		{
 			Criteria = Parent?.Query + Query
 		};
+
+    public WebElementQueryBuilder WithElement(string element)
+    {
+        Query += $" {element}";
+        return this;
+    }
+
+    public WebElementQueryBuilder WithOption() => WithElement(WebElementTagName.Option);
 }

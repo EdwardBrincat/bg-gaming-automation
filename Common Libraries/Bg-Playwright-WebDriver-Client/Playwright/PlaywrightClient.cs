@@ -27,6 +27,8 @@ public class PlaywrightClient
             Driver?.CloseAsync().GetAwaiter().GetResult();
     }
 
+    public string GetUrl() => Driver?.Url;
+
     public Task Open(string url)
     {
         try
@@ -40,6 +42,12 @@ public class PlaywrightClient
         {
             throw HandleFailureException($"Failed to open url[{url}] due to [{e.Message}]");
         }
+    }
+
+    public PlaywrightClient WaitForPageToLoad()
+    {
+        Driver?.WaitForLoadStateAsync(LoadState.DOMContentLoaded).GetAwaiter().GetResult();
+        return this;
     }
 
     public PlaywrightClient WaitForElementToBeInteractable(Locator element)
@@ -159,6 +167,32 @@ public class PlaywrightClient
 
     public string GetText(Locator element) 
         => Driver?.Locator(element.Criteria).First.InnerTextAsync().GetAwaiter().GetResult();
+
+    public async Task<IList<ILocator>> GetAllPlaywrightElements(Locator element)
+    {
+        try
+        {
+            var elements = await Driver?.Locator(element.Criteria).AllAsync();
+            return elements.ToList();
+        }
+        catch (Exception e)
+        {
+            throw HandleFailureException($"Failed getting all web elements of type [{element}] as ILocator due to [{e.Message}].");
+        }
+    }
+
+    public PlaywrightClient SendKeys(string keyCode)
+    {
+        try
+        {
+            Driver?.Keyboard.PressAsync("Escape").GetAwaiter().GetResult();
+            return this;
+        }
+        catch (Exception e)
+        {
+            throw HandleFailureException($"Failed to press [{keyCode}] due to [{e.Message}].");
+        }
+    }
 
     public TestStepFailureException HandleFailureException(string message)
     {        

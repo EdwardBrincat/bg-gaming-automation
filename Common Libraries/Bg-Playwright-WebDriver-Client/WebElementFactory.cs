@@ -2,6 +2,8 @@
 using Bg_Playwright_WebDriver_Client.Button;
 using Bg_Playwright_WebDriver_Client.Input;
 using Bg_Playwright_WebDriver_Client.Text;
+using Bg_Playwright_WebDriver_Client.SiderBarLink;
+using Bg_Playwright_WebDriver_Client.Select;
 
 
 namespace Bg_Playwright_WebDriver_Client;
@@ -38,4 +40,15 @@ public class WebElementFactory
     public TextElementQueryBuilder CreateTextElement(string childAttributeName, string childAttributeValue)
         => ActivatorUtilities.CreateInstance<TextElementQueryBuilder>(_serviceProvider, childAttributeName, childAttributeValue);
 
+    public SideBarLinkElementQueryBuilder CreateSideBarLinkElement(string dataTestId)
+        => ActivatorUtilities.CreateInstance<SideBarLinkElementQueryBuilder>(_serviceProvider, dataTestId);
+
+    public SideBarLinkElementQueryBuilder CreateSideBarLinkElement(string childAttributeName, string childAttributeValue)
+        => ActivatorUtilities.CreateInstance<SideBarLinkElementQueryBuilder>(_serviceProvider, childAttributeName, childAttributeValue);
+
+    public SelectElementQueryBuilder CreateSelectElement(string dataTestId)
+       => ActivatorUtilities.CreateInstance<SelectElementQueryBuilder>(_serviceProvider, dataTestId);
+
+    public SelectElementQueryBuilder CreateSelectElement(string childAttributeName, string childAttributeValue)
+        => ActivatorUtilities.CreateInstance<SelectElementQueryBuilder>(_serviceProvider, childAttributeName, childAttributeValue);
 }
